@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>Form Responsivo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='custom.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 py-5">
+                    <h1>Formulário Responsivo</h1>
+                    <p class="lead">Esse site foi criado com um front-end responsivo usando Bootstrap e seu back-end foi construido em PHP, JavaScript e AJAX.</p>
+
+                    <form id="form-contato" method="post" action="contato.php" role="form">
+                        <div class="messages"></div>
+
+                            <div class="controls">
+
+                                
+                                <div><br><h3>Informações pessoais</h3><br></div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cpf">CPF *</label> <!-- Decidi colocar o CPF no lugar do Id, pois é um número único de cada pessoa, e serve ao propósito além de ser fácil de verificar -->
+                                            <input id="cpf" type="text" name="cpf" class="form-control" size="11" maxlength="11" placeholder="Insira o CPF para o cadastro *" required="required" data-error="Um CPF é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                 <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="fullname">Nome Completo *</label>
+                                            <input id="fullname" type="text" name="fullname" class="form-control" placeholder="Coloque o nome completo *" required="required" data-error="O nome completo é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="nasc">Nascimento *</label>
+                                            <input id="nasc" type="date" name="nasc" class="form-control" required="required" data-error="Uma data de nascimento é necessária.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                 <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="tel">Telefone *</label>
+                                            <input id="tel" type="tel" name="tel" class="form-control" placeholder="Coloque o telefone *" size="11" maxlength="11" required="required" data-error="Um telefone é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email *</label>
+                                            <input id="email" type="email" name="email" class="form-control" placeholder="Coloque um email *" required="required" data-error="Um email válido é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sexo">Sexo *</label>
+                                            <select id="sexo" name="sexo" class="form-control" required="required" data-error="Especifique o sexo.">
+                                                <option value="Feminino">Feminino</option>
+                                                <option value="Masculino">Masculino</option>
+                                                <option value="Indefinido">Não especificado</option>>
+                                            </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div><br><h3>Endereço</h3><br></div> <!-- A integração do viacep.js permite a busca automática do endereço, em muitos casos de quase todos os campos, isso quando o cep é especifico e não geral. -->
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cep">CEP *</label>
+                                            <input id="cep" type="text" name="cep" class="form-control" placeholder="Coloque um CEP *" value="" size="10" maxlength="9" required="required" data-error="Um CEP válido é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="rua">Rua *</label>
+                                            <input id="rua" type="text" name="rua" class="form-control" placeholder="Coloque um endereço *" size="60"  required="required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="numero">Número *</label>
+                                            <input id="numero" type="number" name="numero" class="form-control" placeholder="Coloque o número da casa*" size="6"  maxlength="6" required="required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="bairro">Bairro *</label>
+                                            <input id="bairro" type="text" name="bairro" class="form-control" placeholder="Coloque um Bairro *" size="60"  required="required" data-error="Um bairro válido é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="comple">Complemento</label>
+                                            <input id="comple" type="text" name="comple" class="form-control" placeholder="Coloque o Complemento" size="60">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="refer">Referência</label>
+                                            <input id="refer" type="text" name="refer" class="form-control" placeholder="Coloque uma ou mais referências" size="60">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cidade">Cidade *</label>
+                                            <input id="cidade" type="text" name="cidade" class="form-control" placeholder="Coloque uma Cidade *" size="60"  required="required" data-error="Uma cidade válida é necessária.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uf">Estado *</label>
+                                            <input id="uf" type="text" name="uf" class="form-control" placeholder="Coloque um Estado *" size="2"  required="required" data-error="Um Estado válido é necessário.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="ibge">Código IBGE da cidade </label>
+                                            <input id="ibge" type="text" name="ibge" class="form-control" >
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div><br><h3>Informações adicionais</h3><br></div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="prof">Profissão *</label>
+                                            <input id="prof" type="text" name="prof" class="form-control" placeholder="Coloque uma Profissão *" required="required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="empresa">Empresa *</label>
+                                            <input id="empresa" type="text" name="empresa" class="form-control" placeholder="Coloque o nome da empresa empregadora" size="60"  required="required">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cnpj">CNPJ</label>
+                                            <input id="cnpj" type="text" name="cnpj" class="form-control" placeholder="Coloque o CNPJ da empresa empregadora, caso saiba">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="renda">Renda mensal *</label>
+                                            <input id="renda" type="text" name="renda" class="form-control" placeholder="Coloque a renda mensal *" size="6"  required="required" data-error="Uma renda é necessária">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="livre">Campo livre para informações adicionais</label> <!-- Esse campo serve para o funcionário que está preenchendo o cadastro colocar as informações que achar relevante -->
+                                            <textarea id="livre" name="livre" class="form-control" placeholder="Insira informações que considera importante. Ex.: Refêrencias pessoas, números de recado, informações sobre disponibilidade de horários, informações sobre trabalho, etc... " rows="4"></textarea>                                            
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div><br></div>
+                                    <div class="col-md-12" align="center">
+                                        <input type="submit" class="btn btn-success btn-send" value="Enviar para análise">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="text-muted" align="center">
+                                            <strong>*</strong> Esses campos são de preenchimento obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="contato.js"></script>
+    <script src="viacep.js"></script>
+    <script src="jmask.js"></script>
+
+
+
+</html>
