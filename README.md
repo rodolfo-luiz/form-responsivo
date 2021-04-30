@@ -7,8 +7,8 @@ Isso agiliza todo o processo de preenchimento do formulário.
 
 Utilizei o método POST no formulário para que as variáveis não ficassem expostas na URL
 
-Da forma que está configurado o arquivo contato.php, o envio de emails dará erro em alguma linha se for usado em localhost sem um servidor smpt configurado.
+Da forma que está configurado o arquivo contato.php, o envio de emails dará erro em alguma linha se for usado em localhost sem um servidor smtp configurado.
 
-O melhor jeito de olhar o funcionando é hospedando. Ou dar uma olhada no meu link: http://beta.demaio.dev.br/form-responsivo/index.html
+O melhor jeito de olhar o funcionando é hospedando. Ou dar uma olhada no [meu link](http://beta.demaio.dev.br/form-responsivo/index.html)
 
 Sem o certificado SSL instalado no site, os emails sempre cairão no spam.
